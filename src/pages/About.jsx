@@ -80,3 +80,15 @@ function About() {
 }
 
 export default About;
+<<<<<<< HEAD
+=======
+=======
+import "../styles/About.css"
+function About() {
+    return (
+        <div>Bagian About</div>
+    )
+}
+export default About;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+>>>>>>> 8adca2f1162956958f03a929855f7ad63baa34df

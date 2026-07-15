@@ -93,7 +93,7 @@ function List() {
 
     const handleOrder = (serviceName) => {
         // Redirect langsung ke WhatsApp dengan pesan otomatis
-        const whatsappNumber = "628xxxxxxxxxx"; // Ganti dengan nomor WhatsApp kamu
+        const whatsappNumber = "081539952365"; // Ganti dengan nomor WhatsApp kamu
         const text = encodeURIComponent(`Halo NexaWeb, saya tertarik dengan layanan *${serviceName}*. Bisa konsultasi lebih lanjut?`);
         window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
     };
@@ -102,7 +102,7 @@ function List() {
         <section className="pricing-section"><br />
             <div className="pricing-container">
                 <div className="pricing-header">
-                    <h2 className="pricing-main-title">List Harga & Layanan</h2>
+                    <h2 className="pricing-main-title">List Harga</h2>
                     <p className="pricing-subtitle">Pilih paket solusi digital terbaik yang dirancang khusus untuk meningkatkan skala bisnis Anda.</p>
                 </div>
 
