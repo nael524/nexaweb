@@ -5,7 +5,7 @@ import logo from "../images/logo2.png"
 import Navbar from "../components/Navbar";
 function Landing() {
     return (
-        <>
+        <><br /><br /><br />
             <div className="container-landing">
                 <p className="circle"></p>
                 <p className="judul">Nexa Web</p>

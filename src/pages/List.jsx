@@ -25,7 +25,7 @@ function List() {
             id: 2,
             badge: "SYSTEM INFORMASI",
             title: "Sistem Informasi & ERP",
-            price: "Rp 7.500.000",
+            price: "Rp 3.500.000",
             period: "Mulai Dari",
             delivery: "Estimasi 20-45 Hari",
             features: [
@@ -59,7 +59,7 @@ function List() {
             id: 4,
             badge: "MOBILE APPLICATIONS",
             title: "Mobile App (Android & iOS)",
-            price: "Rp 15.000.000",
+            price: "Rp 7.000.000",
             period: "Mulai Dari",
             delivery: "Estimasi 30-60 Hari",
             features: [
@@ -99,7 +99,7 @@ function List() {
     };
 
     return (
-        <section className="pricing-section">
+        <section className="pricing-section"><br />
             <div className="pricing-container">
                 <div className="pricing-header">
                     <h2 className="pricing-main-title">List Harga & Layanan</h2>
