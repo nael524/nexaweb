@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base Navbar styling */
+.navbar {
+    background-color: #071A68;
+    color: #ffffff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+=======
 /* ==========================================================================
    1. DESIGN SYSTEM VARIABLES (Dioptimalkan Biar Ramping)
    ========================================================================== */
@@ -51,12 +70,49 @@ body {
     z-index: 99999;
     box-shadow: 0 4px 20px rgba(7, 26, 104, 0.12);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #a0b3ff;
+    /* Warna hover sedikit lebih terang */
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+=======
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -124,22 +180,83 @@ body {
 /* ==========================================================================
    5. HAMBURGER BUTTON STYLING
    ========================================================================== */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
 .menu-toggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 24px;
     height: 17px;
+=======
+<<<<<<< HEAD
+    width: 25px;
+=======
+    width: 28px;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+    height: 20px;
+>>>>>>> baaa896a8651c6c745949fcc7a36afdf33f9bfb0
     background: transparent;
     border: none;
     cursor: pointer;
+<<<<<<< HEAD
+    z-index: 1001;
+=======
     padding: 0;
     z-index: 100001;
+<<<<<<< HEAD
+=======
+    /* Berada di atas layer menu mobile */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+>>>>>>> baaa896a8651c6c745949fcc7a36afdf33f9bfb0
 }
 
 .menu-toggle .bar {
     height: 2.5px;
     width: 100%;
+<<<<<<< HEAD
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* --- RESPONSIVE MOBILE (Layar di bawah 768px) --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        /* Tampilkan hamburger di mobile */
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        /* Sesuaikan dengan tinggi navbar */
+        right: -100%;
+        /* Sembunyikan di sebelah kanan layar */
+        flex-direction: column;
+        background-color: #071A68;
+        width: 250px;
+        /* Lebar menu mobile */
+        height: calc(100vh - 60px);
+        padding: 40px 20px;
+        transition: right 0.4s ease;
+        /* Efek slide ke kanan */
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ketika menu aktif, geser ke posisi kanan (menempel) */
+    .navbar-links.active {
+        right: 0;
+    }
+
+    .navbar-links li {
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    .navbar-links a {
+        font-size: 18px;
+=======
     background-color: var(--text-light);
     border-radius: 4px;
     transition: var(--transition-smooth);
@@ -211,26 +328,56 @@ body {
     }
 
     .navbar-links a {
+<<<<<<< HEAD
         font-size: 15px;
         /* Font size mobile yang clean, proporsional, & profesional */
         font-weight: 300;
+=======
+        font-size: 22px;
+        /* Lebih besar agar jempol user mudah menekan */
+        font-weight: 500;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+>>>>>>> baaa896a8651c6c745949fcc7a36afdf33f9bfb0
         display: block;
         width: 100%;
         padding: 4px 0;
     }
 
+<<<<<<< HEAD
     /* Animasi Hamburger ke 'X' tetap konsisten dan halus */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
+=======
+<<<<<<< HEAD
+    /* Animasi tombol hamburger jadi huruf 'X' saat diklik */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+=======
+    /* Animasi Transformasi Hamburger Menjadi 'X' Modis */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+>>>>>>> baaa896a8651c6c745949fcc7a36afdf33f9bfb0
     }
 
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
+<<<<<<< HEAD
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+=======
         transform: translateX(10px);
     }
 
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
         width: 100%;
+<<<<<<< HEAD
+=======
+        /* Memaksa batang ke-3 memanjang penuh saat jadi X */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
+>>>>>>> baaa896a8651c6c745949fcc7a36afdf33f9bfb0
     }
 }
