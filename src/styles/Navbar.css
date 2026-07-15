@@ -162,7 +162,7 @@ body {
    ========================================================================== */
 @media screen and (max-width: 768px) {
     .navbar {
-        height: var(--nav-height-mobile);
+        height: 56px
     }
 
     .navbar-container {
