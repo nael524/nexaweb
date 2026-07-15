@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'; // Sesuaikan path-nya
 import About from './pages/About';
 import Landing from './pages/Landing'
-
+import List from './pages/List';
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
-        {/* Kamu bisa tambah route lain di sini nanti */}
+        <Route path="/list" element={<List />} />
+
       </Routes>
     </Router>
   );

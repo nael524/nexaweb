@@ -1,0 +1,226 @@
+/* Base Styling & Section */
+.pricing-section {
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    /* Latar belakang abu sangat muda yang premium */
+    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Text */
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-main-title {
+    color: #13c343;
+    /* Hijau cerah sesuai referensi */
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.pricing-subtitle {
+    color: #64748b;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid Layout (Secara default menumpuk satu kolom di mobile) */
+.pricing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Card Styling */
+.pricing-card {
+    display: flex;
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(7, 26, 104, 0.05);
+    /* Bayangan soft kebiruan */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e2e8f0;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(7, 26, 104, 0.1);
+}
+
+/* Special Styling untuk Card Terpopuler/Rekomendasi */
+.pricing-card.popular {
+    border: 2px solid #071A68;
+    /* Beri border warna biru tua identitas */
+}
+
+.popular-ribbon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #071A68;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Lencana Hijau Vertikal Kiri */
+.card-badge {
+    background-color: #13c343;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    flex-shrink: 0;
+}
+
+.card-badge span {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    display: block;
+}
+
+/* Sisi Kanan Konten Card */
+.card-content {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-header-info {
+    margin-bottom: 15px;
+}
+
+.delivery-time {
+    font-size: 12px;
+    color: #13c343;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-title {
+    color: #071A68;
+    /* Warna Biru Tua Utama */
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+/* Desain Bagian Harga */
+.price-section {
+    background-color: #f1f5f9;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-period {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.price-amount {
+    font-size: 24px;
+    font-weight: 800;
+    color: #071A68;
+}
+
+/* Fitur List */
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-features li {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.check-icon {
+    color: #13c343;
+    font-weight: bold;
+}
+
+/* Tombol Order Premium */
+.btn-order {
+    background-color: #071A68;
+    /* Biru Tua */
+    color: #ffffff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    margin-top: auto;
+    /* Memaksa tombol sejajar di bagian bawah */
+}
+
+.btn-order:hover {
+    background-color: #13c343;
+    /* Berubah jadi hijau saat di-hover */
+    transform: scale(1.02);
+}
+
+/* Custom Hover efek untuk tombol di card terpopuler */
+.pricing-card.popular .btn-order {
+    background-color: #13c343;
+}
+
+.pricing-card.popular .btn-order:hover {
+    background-color: #071A68;
+}
+
+/* --- MEDIA QUERY DESKTOP (Grid 2 & 3 Kolom) --- */
+@media screen and (min-width: 768px) {
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Layar tablet: 2 kolom */
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Layar laptop/PC: 3 kolom */
+    }
+}

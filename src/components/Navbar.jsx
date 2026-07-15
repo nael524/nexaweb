@@ -31,6 +31,7 @@ function Navbar() {
                 <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
                     <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
                     <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+                    <li><Link to="/list" onClick={toggleMenu}>List Harga</Link></li>
                     <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
                     <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
                 </ul>
