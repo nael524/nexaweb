@@ -1,0 +1,130 @@
+/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base Navbar styling */
+.navbar {
+    background-color: #071A68;
+    color: #ffffff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #a0b3ff;
+    /* Warna hover sedikit lebih terang */
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* --- RESPONSIVE MOBILE (Layar di bawah 768px) --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        /* Tampilkan hamburger di mobile */
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        /* Sesuaikan dengan tinggi navbar */
+        right: -100%;
+        /* Sembunyikan di sebelah kanan layar */
+        flex-direction: column;
+        background-color: #071A68;
+        width: 250px;
+        /* Lebar menu mobile */
+        height: calc(100vh - 60px);
+        padding: 40px 20px;
+        transition: right 0.4s ease;
+        /* Efek slide ke kanan */
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ketika menu aktif, geser ke posisi kanan (menempel) */
+    .navbar-links.active {
+        right: 0;
+    }
+
+    .navbar-links li {
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    .navbar-links a {
+        font-size: 18px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Animasi tombol hamburger jadi huruf 'X' saat diklik */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
