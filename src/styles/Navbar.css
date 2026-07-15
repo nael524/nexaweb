@@ -75,6 +75,15 @@
     transition: all 0.3s ease;
 }
 
+.logo-image {
+    height: 40px;
+    /* Sesuaikan tinggi logo dengan kebutuhan design kamu */
+    width: auto;
+    /* Biar lebar gambar menyesuaikan secara proporsional */
+    display: block;
+    /* Menghilangkan space kosong bawaan tag inline-block */
+}
+
 /* --- RESPONSIVE MOBILE (Layar di bawah 768px) --- */
 @media screen and (max-width: 768px) {
     .menu-toggle {
