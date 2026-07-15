@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar";
-<<<<<<< HEAD
 import "../styles/About.css";
+
 import natanael from "../images/natanael.jpeg";
 import salma from "../images/salma.jpeg";
 import dewita from "../images/dewita.jpeg";
+
 function About() {
   return (
     <>
+      <Navbar />
+
       <div className="about">
         <h2 className="about-title">Tentang Kami</h2>
 
@@ -41,9 +44,7 @@ function About() {
                 <li>
                   Menyediakan solusi website yang berkualitas dan terjangkau.
                 </li>
-
                 <li>Mengutamakan kepuasan klien dan hasil yang optimal.</li>
-
                 <li>Terus berinovasi mengikuti perkembangan teknologi.</li>
               </ul>
             </div>
@@ -55,26 +56,20 @@ function About() {
 
           <div className="developer-list">
             <div className="developer-card">
-              <img src={natanael} alt="" />
-
+              <img src={natanael} alt="Natanael" />
               <h4>Natanael</h4>
-
               <span>Full Stack Developer</span>
             </div>
 
             <div className="developer-card">
-              <img src={salma} alt="" />
-
+              <img src={salma} alt="Salma" />
               <h4>Salma</h4>
-
               <span>Design UI/UX</span>
             </div>
 
             <div className="developer-card">
-              <img src={dewita} alt="" />
-
+              <img src={dewita} alt="Dewita" />
               <h4>Dewita</h4>
-
               <span>Promotion</span>
             </div>
           </div>
@@ -85,13 +80,3 @@ function About() {
 }
 
 export default About;
-=======
-import "../styles/About.css"
-
-function About() {
-    return (
-        <div>Bagian About</div>
-    )
-}
-export default About;
->>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
