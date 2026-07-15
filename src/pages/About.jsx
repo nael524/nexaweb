@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+<<<<<<< HEAD
 import "../styles/About.css";
 import natanael from "../images/natanael.jpeg";
 import salma from "../images/salma.jpeg";
@@ -84,3 +85,13 @@ function About() {
 }
 
 export default About;
+=======
+import "../styles/About.css"
+
+function About() {
+    return (
+        <div>Bagian About</div>
+    )
+}
+export default About;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset & Base Styling */
 * {
     margin: 0;
@@ -15,12 +16,70 @@
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+=======
+/* ==========================================================================
+   1. DESIGN SYSTEM VARIABLES (Memudahkan Maintenance Warna)
+   ========================================================================== */
+:root {
+    --primary-color: #071A68;
+    /* Biru Utama NexaWeb */
+    --accent-color: #13c343;
+    /* Hijau Aksen */
+    --text-light: #ffffff;
+    --text-muted: #a0b3ff;
+    --text-dark: #0f172a;
+    --nav-height-desktop: 80px;
+    --nav-height-mobile: 70px;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   2. GLOBAL LOCK (Anti Bocor Kanan-Kiri & Anti Zoom Paksa)
+   ========================================================================== */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Mengunci total pergeseran horizontal */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Biar padding tidak merusak kalkulasi lebar 100% */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   3. NAVBAR CONTAINER STYLING
+   ========================================================================== */
+.navbar {
+    background-color: var(--primary-color);
+    position: fixed;
+    /* Menggunakan fixed agar melayang sempurna saat di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height-desktop);
+    display: flex;
+    align-items: center;
+    z-index: 99999;
+    /* Angka tertinggi agar tidak tertimpa komponen apapun */
+    box-shadow: 0 4px 20px rgba(7, 26, 104, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -55,21 +114,104 @@
 }
 
 /* Hamburger Button (Hidden on Desktop) */
+=======
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    /* Jarak aman konten dari pinggir layar komputer */
+}
+
+/* Logo Adjustment */
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo a:hover {
+    transform: scale(1.03);
+}
+
+.logo-image {
+    height: 42px;
+    /* Ukuran pas profesional */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   4. NAVIGATION LINKS (DESKTOP)
+   ========================================================================== */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 32px;
+    /* Menggunakan gap modern, bukan margin-left lagi */
+}
+
+.navbar-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition-smooth);
+}
+
+/* Efek Animasi Garis Bawah Kreatif saat Hover */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition-smooth);
+}
+
+.navbar-links a:hover {
+    color: var(--accent-color);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   5. HAMBURGER BUTTON STYLING (Premium Micro-interactions)
+   ========================================================================== */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
 .menu-toggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 25px;
+=======
+    width: 28px;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
     height: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
+<<<<<<< HEAD
     z-index: 1001;
+=======
+    padding: 0;
+    z-index: 100001;
+    /* Berada di atas layer menu mobile */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
 }
 
 .menu-toggle .bar {
     height: 3px;
     width: 100%;
+<<<<<<< HEAD
     background-color: #ffffff;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -111,20 +253,112 @@
 
     .navbar-links a {
         font-size: 18px;
+=======
+    background-color: var(--text-light);
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+/* Modifikasi lebar batang tengah hamburger biar estetik */
+.menu-toggle .bar:nth-child(2) {
+    width: 75%;
+    align-self: flex-end;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE MOBILE RIGID LAYOUT (Layar di bawah 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 56px
+    }
+
+    .navbar-container {
+        padding: 0 24px;
+        /* Spacing sisi HP yang ideal, tidak menempel */
+    }
+
+    .logo-image {
+        height: 34px;
+        /* Sedikit dikecilkan untuk space layar HP */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* MENU SLIDE MOBILE PREMIUM
+       Menggunakan kombinasi background semi-transparan & backdrop-filter (Glassmorphism) 
+    */
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Sembunyi total di luar layar kanan */
+        width: 80%;
+        /* Menutup 80% area layar dari kanan */
+        height: 100vh;
+        background-color: rgba(7, 26, 104, 0.96);
+        /* Biru pekat dengan transparansi tipis */
+        backdrop-filter: blur(10px);
+        /* Efek blur kaca di belakang menu */
+        -webkit-backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* Teks rata kiri di menu mobile agar rapi */
+        padding: 0 60px;
+        /* Indentasi teks menu mobile */
+        gap: 40px;
+        transition: var(--transition-smooth);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Trigger Aktif saat State True */
+    .navbar-links.active {
+        right: 0;
+        /* Sliding mulus ke dalam layar */
+    }
+
+    .navbar-links li {
+        width: 100%;
+    }
+
+    .navbar-links a {
+        font-size: 22px;
+        /* Lebih besar agar jempol user mudah menekan */
+        font-weight: 500;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
         display: block;
         width: 100%;
     }
 
+<<<<<<< HEAD
     /* Animasi tombol hamburger jadi huruf 'X' saat diklik */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+=======
+    /* Animasi Transformasi Hamburger Menjadi 'X' Modis */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
     }
 
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
+<<<<<<< HEAD
     }
 
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
+=======
+        transform: translateX(10px);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+        width: 100%;
+        /* Memaksa batang ke-3 memanjang penuh saat jadi X */
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
     }
 }

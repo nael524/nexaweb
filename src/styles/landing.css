@@ -25,7 +25,10 @@
     z-index: 1;
     top: 100px;
     font-size: 40px;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
     text-align: center;
 }
 
@@ -97,7 +100,11 @@ a {
 
     .judul {
         font-size: 30px;
+<<<<<<< HEAD
         top: 50px;
+=======
+        top: 40px;
+>>>>>>> 339d97cb6ffd227e166562a3611e43cfe2bc3de7
     }
 
     .subjudul {
